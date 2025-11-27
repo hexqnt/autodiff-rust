@@ -1,0 +1,8 @@
+[package]
+name = "fake_cblas"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+faer = "0.23"
+rand = "0.9"

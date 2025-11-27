@@ -1,0 +1,18 @@
+[workspace]
+resolver = "2"
+members = ["crates/ad_artifacts", "crates/enz",
+    "crates/enzyme_base",
+    "crates/fake_cblas",
+    "crates/forward_mode", "crates/regression",
+    "crates/reverse_mode",
+]
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+# codegen-units = 1
+# strip = true
+
+[profile.dev]
+opt-level = 3
+lto = "fat"

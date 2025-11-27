@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400">
+  <!-- Show that x=y at each integer x -->
+  <path stroke="#bbb" fill="none" d="M60,360 V120 H540 V360 M140,360 V200 H460 V360 M220,360 V280 H380 V360"/>
+  <!-- Axis -->
+  <path stroke="#000" d="M10,360 H590 M300,390 V10"/>
+  <g font-family="sans-serif" font-size="20px">
+    <!-- Labels along y-axis -->
+    <g style="text-anchor:end">
+      <text x="295" y="287">1</text>
+      <text x="295" y="207">2</text>
+      <text x="295" y="127">3</text>
+      <text x="295" y="47">4</text>
+    </g>
+    <!-- Labels along x-axis -->
+    <g style="text-anchor:middle">
+      <text x="60" y="383">&#x2212;3</text>
+      <text x="140" y="383">&#x2212;2</text>
+      <text x="220" y="383">&#x2212;1</text>
+      <text x="380" y="383">1</text>
+      <text x="460" y="383">2</text>
+      <text x="540" y="383">3</text>
+    </g>
+    <!-- Just one '0' for both axes, to avoid clutter round the origin -->
+    <text x="305" y="383">0</text>
+  </g>
+  <!-- Graph -->
+  <path stroke="#f00" stroke-width="3" fill="none" d="M10,70 L300,360 L590,70"/>
+</svg>

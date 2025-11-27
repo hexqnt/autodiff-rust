@@ -1,0 +1,9 @@
+[package]
+name = "regression"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+argmin = "0.11"
+argmin-math = { version = "0.5", default-features = false, features = ["vec"] }
+plotters = "0.3"
