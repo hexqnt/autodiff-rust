@@ -406,10 +406,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "enz"
-version = "0.1.0"
-
-[[package]]
 name = "enzyme_base"
 version = "0.1.0"
 

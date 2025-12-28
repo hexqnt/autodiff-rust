@@ -12,6 +12,8 @@ const BASE_LABEL_FONT: i32 = 28;
 const BASE_AXIS_DESC_FONT: i32 = 34;
 const BASE_SERIES_LABEL_FONT: i32 = 48;
 const BASE_LEGEND_LINE_HALF: i32 = 10;
+pub const POINTS_SVG: &str = "points.svg";
+pub const FIT_SVG: &str = "fit.svg";
 
 fn scaled_i32(v: i32) -> i32 {
     (v as f32 * SCALE) as i32
@@ -103,10 +105,10 @@ where
     let (x_max, min_y, max_y) = bounds_with_model(temps, &model);
 
     // 1) Только точки.
-    draw_points_only(temps, x_max, min_y, max_y, "points.svg")?;
+    draw_points_only(temps, x_max, min_y, max_y, POINTS_SVG)?;
 
     // 2) Точки + модель.
-    let root = SVGBackend::new("fit.svg", canvas_size()).into_drawing_area();
+    let root = SVGBackend::new(FIT_SVG, canvas_size()).into_drawing_area();
     root.fill(&TRANSPARENT)
         .map_err(|e| Error::msg(e.to_string()))?;
 

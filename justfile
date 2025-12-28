@@ -71,8 +71,8 @@ llvm-log:
 	@echo "LLVM pass log → {{target_dir}}/llvm-pass.log"
 
 # Запуск примеров
-run name:
-	RUSTFLAGS="{{autodiff_rustflags}}" cargo +enzyme run -p {{name}} --release
+run name *args:
+	RUSTFLAGS="{{autodiff_rustflags}}" cargo +enzyme run -p {{name}} --release -- {{args}}
 
 expand name:
 	RUSTFLAGS="{{autodiff_rustflags}}" cargo +enzyme expand -p {{name}} --release

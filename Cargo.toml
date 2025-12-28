@@ -1,9 +1,11 @@
 [workspace]
 resolver = "2"
-members = ["crates/ad_artifacts", "crates/enz",
+members = [
+    "crates/ad_artifacts",
     "crates/enzyme_base",
     "crates/fake_cblas",
-    "crates/forward_mode", "crates/regression",
+    "crates/forward_mode",
+    "crates/regression",
     "crates/reverse_mode",
 ]
 
